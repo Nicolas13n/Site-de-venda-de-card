@@ -1,0 +1,244 @@
+@import url("--fonte.scss");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+}
+
+header {
+  background-color: #000000;
+  padding: 20px;
+  font-family: "yu-gi-og", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header div.logo {
+  margin-left: 130px;
+}
+header div.logo img {
+  height: 100px;
+}
+header nav {
+  margin-right: 140px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+header div.menuIcon {
+  display: none;
+}
+header .menuMobile {
+  display: none;
+}
+
+section div.mySlider {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  margin-bottom: 50px;
+}
+section div.mySlider img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.containerMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 80%;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+main div.card {
+  width: 20%;
+  height: 30%;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+main div.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+main div.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+main div.card p {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+}
+main div.card button {
+  height: 50px;
+  width: 100%;
+  border-radius: 20px;
+  font-size: 1.2rem;
+}
+
+footer {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-family: "yu-gi-og", sans-serif;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 840px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header div.logo {
+    margin-left: 10px;
+  }
+  header div.logo img {
+    height: 100px;
+  }
+  header nav ul {
+    display: none;
+  }
+  header div.menuIcon {
+    display: block;
+    cursor: pointer;
+    width: 20%;
+    height: 30%;
+  }
+  header div.menuIcon img {
+    width: 100%;
+    height: 100%;
+  }
+  header .menuMobile {
+    position: fixed;
+    top: 0;
+    right: -30%;
+    height: 100vh;
+    width: 30%;
+    max-width: 320px;
+    background-color: #666;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  header .menuMobile.active {
+    right: 0;
+  }
+  header .menuMobile h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  header .menuMobile a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.2s ease;
+  }
+  header .close img {
+    width: 30%;
+    height: 80%;
+  }
+  main {
+    width: 80%;
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  main div.card {
+    width: 60%;
+    height: 40%;
+    max-width: 40%;
+    min-height: 20%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+  }
+  main div.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  main div.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  main div.card p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+  }
+  main div.card button {
+    height: 50px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
